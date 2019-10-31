@@ -6,4 +6,3 @@ class Quote {
 
 }
 
-Quote myquote = Quote(quote: 'Testing quote', author: 'Hunter Hines');

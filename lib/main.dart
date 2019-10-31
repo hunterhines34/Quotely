@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() => runApp(MaterialApp(
   home: Quotely(),
@@ -18,7 +19,7 @@ class _QuotelyState extends State<Quotely> {
     Quote(quote: 'Like, Scoob...you should use Flutter, man', author: 'Shaggy'),
     Quote(quote: 'Flutter is the Swiss army knife of development', author: 'Cardi B'),
   ];
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +31,13 @@ class _QuotelyState extends State<Quotely> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: quotes.map((quote) => Text('${quote.quote} - ${quote.author}', style: TextStyle(
-            fontSize: 15.0,
-            fontStyle: FontStyle.italic
-          ),)).toList(),
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
         ),
       ),
     );
   }
 }
+
+
 
