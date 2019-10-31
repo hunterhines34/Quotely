@@ -1,6 +1,6 @@
 # quotely
 
-A simple Flutter app showing how to loop through lists of data. 
+A simple Flutter app showing how to loop through lists of data with the Card widget. 
 
 ## Getting Started
 
