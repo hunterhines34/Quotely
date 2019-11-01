@@ -32,7 +32,14 @@ class _QuotelyState extends State<Quotely> {
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
+          children: quotes.map((quote) => QuoteCard(
+              quote: quote,
+              delete: () {
+                setState(() {
+                  quotes.remove(quote);
+                });
+              }
+          )).toList(),
         ),
       ),
     );
