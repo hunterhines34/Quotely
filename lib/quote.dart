@@ -3,6 +3,5 @@ class Quote {
   String author;
 
   Quote({ this.quote, this.author });
-
 }
 
